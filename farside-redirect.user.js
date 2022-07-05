@@ -3,6 +3,7 @@
 // @namespace   https://github.com/ayes-web
 // @match       http*://youtu.be/*
 // @match       http*://*.youtube.com/*
+// @match       http*://*.youtube-nocookie.com/*
 // @match       http*://*.reddit.com/*
 // @match       http*://*.instagram.com/*
 // @match       http*://*.twitter.com/*
