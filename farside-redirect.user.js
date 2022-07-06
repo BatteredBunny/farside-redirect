@@ -15,7 +15,7 @@
 // @match       http*://*.tiktok.com/*
 // @grant       GM_getValue
 // @grant       GM_setValue
-// @version     1.0
+// @version     1.1
 // @author      ayes-web
 // @description Unofficial Farside redirect userscript
 // @homepageURL https://github.com/ayes-web/farside-redirect/
@@ -25,47 +25,27 @@
 // ==/UserScript==
 
 // Sets default values
-if (GM_getValue("farsideEndpoint") === undefined) {
-    GM_setValue("farsideEndpoint", "https://farside.link/")
-}
-if (GM_getValue("redirectOldReddit") === undefined) {
-    GM_setValue("redirectOldReddit", false)
-}
-if (GM_getValue("preferredYoutubeFrontend") === undefined) {
-    GM_setValue("preferredYoutubeFrontend", "invidious")
-}
-if (GM_getValue("preferredRedditFrontend") === undefined) {
-    GM_setValue("preferredRedditFrontend", "libreddit")
-}
-if (GM_getValue("redirectYoutube") === undefined) {
-    GM_setValue("redirectYoutube", true)
-}
-if (GM_getValue("redirectReddit") === undefined) {
-    GM_setValue("redirectReddit", true)
-}
-if (GM_getValue("redirectInstagram") === undefined) {
-    GM_setValue("redirectInstagram", true)
-}
-if (GM_getValue("redirectTwitter") === undefined) {
-    GM_setValue("redirectTwitter", true)
-}
-if (GM_getValue("redirectWikipedia") === undefined) {
-    GM_setValue("redirectWikipedia", true)
-}
-if (GM_getValue("redirectMedium") === undefined) {
-    GM_setValue("redirectMedium", true)
-}
-if (GM_getValue("redirectOdysee") === undefined) {
-    GM_setValue("redirectOdysee", true)
-}
-if (GM_getValue("redirectImgur") === undefined) {
-    GM_setValue("redirectImgur", true)
-}
-if (GM_getValue("redirectGoogleTranslate") === undefined) {
-    GM_setValue("redirectGoogleTranslate", true)
-}
-if (GM_getValue("redirectTiktok") === undefined) {
-    GM_setValue("redirectTiktok", true)
+const configDefaultValues = [
+    ["farsideEndpoint", "https://farside.link/"],
+    ["redirectOldReddit", false],
+    ["preferredYoutubeFrontend", "invidious"],
+    ["preferredRedditFrontend", "libreddit"],
+    ["redirectYoutube", true],
+    ["redirectReddit", true],
+    ["redirectInstagram", true],
+    ["redirectTwitter", true],
+    ["redirectWikipedia", false],
+    ["redirectMedium", true],
+    ["redirectOdysee", true],
+    ["redirectImgur", true],
+    ["redirectGoogleTranslate", true],
+    ["redirectTiktok", true],
+];
+
+for (let val of configDefaultValues) {
+    if (GM_getValue(val[0]) === undefined) {
+        GM_setValue(val[0], val[1]);
+    }
 }
 
 // Gets config settings
