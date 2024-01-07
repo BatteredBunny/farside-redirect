@@ -1,6 +1,6 @@
 // ==UserScript==
 // @name        Farside redirect
-// @namespace   https://github.com/ayes-web
+// @namespace   https://github.com/BatteredBunny
 // @match       http*://youtu.be/*
 // @match       http*://*.youtube.com/*
 // @match       http*://*.youtube-nocookie.com/*
@@ -16,10 +16,10 @@
 // @grant       GM_getValue
 // @grant       GM_setValue
 // @version     1.1
-// @author      ayes-web
+// @author      BatteredBunny
 // @description Unofficial Farside redirect userscript
-// @homepageURL https://github.com/ayes-web/farside-redirect/
-// @downloadURL https://github.com/ayes-web/farside-redirect/raw/main/farside-redirect.user.js
+// @homepageURL https://github.com/BatteredBunny/farside-redirect/
+// @downloadURL https://github.com/BatteredBunny/farside-redirect/raw/main/farside-redirect.user.js
 // @license      GPL-3.0 License
 // @run-at document-start
 // ==/UserScript==
